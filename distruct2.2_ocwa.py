@@ -1,7 +1,9 @@
 #################
-################# This is distruct2.2.py by Vikram E. Chhatre, University of Vermont
+################# This version by Zachary R. Hanna
+################# is a slightly modified version of distruct2.2.py
+################# by Vikram E. Chhatre, University of Vermont
 ################# Modification of original distruct.py by Anil Raj
-#################
+################# It should work with python 3 now.
 #################
 ################# vchhatre@uvm.edu
 #################
@@ -18,13 +20,13 @@ import sys, pdb
 
 #def get_poporder(params):
 #    if params.has_key('poporder'):
-#    	handle2 = open(params['poporder'],'r')
+#        handle2 = open(params['poporder'],'r')
 #        poporder = [line.strip() for line in handle2]
 #        handle2.close()
 #        return poporder
 
 #    else:
-#	print "If you'd like to arrange populations in a desired order, include the --poporder flag"
+#        print "If you'd like to arrange populations in a desired order, include the --poporder flag"
 
 
 def plot_admixture(admixture, population_indices, population_labels, title):
@@ -47,7 +49,7 @@ def plot_admixture(admixture, population_indices, population_labels, title):
     subplot = figure.add_axes([xmin,ymin,width,height])
     [spine.set_linewidth(0.001) for spine in subplot.spines.values()]
 
-    for k in xrange(K):
+    for k in range(K):
         if k:
             bottoms = admixture[:,:k].sum(1)
         else:
@@ -95,8 +97,8 @@ def get_admixture_proportions(params):
 
     # get population labels
 
-    if params.has_key('poporder') & params.has_key('popfile'):
-	print "Ordering populations as per ",params['poporder']
+    if all (myk in params for myk in ('poporder', 'popfile')):
+        print("Ordering populations as per ",params['poporder'])
         handle = open(params['popfile'],'r')
         handle2 = open(params['poporder'],'r')
         populations = [line.strip() for line in handle]
@@ -119,8 +121,8 @@ def get_admixture_proportions(params):
 
     else:
 
-        print "file with population labels is not provided or does not exist .... \ncreating population labels based on inferred admixture proportions"
-        population_labels = ['population %d'%i for i in xrange(1,K+1)]
+        print("file with population labels is not provided or does not exist .... \ncreating population labels based on inferred admixture proportions")
+        population_labels = ['population %d'%i for i in range(1,K+1)]
         population_indices = np.argmax(admixture,1)
 
         # re-order samples in admixture matrix
@@ -128,7 +130,7 @@ def get_admixture_proportions(params):
         population_indices = population_indices[order]
         admixture = admixture[order,:]
         order = np.arange(N)
-        for k in xrange(K):
+        for k in range(K):
             order[population_indices==k] = order[population_indices==k][np.argsort(admixture[population_indices==k,:][:,k])[::-1]]
         admixture = admixture[order,:]
 
@@ -159,8 +161,8 @@ def parseopts(opts):
         elif opt in ["--title"]:
             params['title'] = arg
 
-	elif opt in ["--poporder"]:
-	    params['poporder'] = arg
+        elif opt in ["--poporder"]:
+            params['poporder'] = arg
 
 
     return params
@@ -171,14 +173,14 @@ def usage():
     brief description of various flags and options for this script
     """
 
-    print "\nHere is how you can use this script\n"
-    print "Usage: python %s"%sys.argv[0]
-    print "\t -K <int>  (number of populations)"
-    print "\t --input=<file>  (/path/to/input/file; same as output flag passed to structure.py)"
-    print "\t --output=<file> (/path/to/output/file)"
-    print "\t --popfile=<file> (file with known categorical labels; optional)"
-    print "\t --title=<figure title> (a title for the figure; optional)"
-    print "\t --poporder=<file> (file with pop names, one on each line in desired order)"
+    print("\nHere is how you can use this script\n")
+    print("Usage: python %s"%sys.argv[0])
+    print("\t -K <int>  (number of populations)")
+    print("\t --input=<file>  (/path/to/input/file; same as output flag passed to structure.py)")
+    print("\t --output=<file> (/path/to/output/file)")
+    print("\t --popfile=<file> (file with known categorical labels; optional)")
+    print("\t --title=<figure title> (a title for the figure; optional)")
+    print("\t --poporder=<file> (file with pop names, one on each line in desired order)")
 
 
 if __name__=="__main__":
@@ -193,7 +195,7 @@ if __name__=="__main__":
             usage()
             sys.exit(2)
     except getopt.GetoptError:
-        print "Incorrect options passed"
+        print("Incorrect options passed")
         usage()
         sys.exit(2)
 
@@ -201,7 +203,7 @@ if __name__=="__main__":
 
     # get the data to be plotted
     admixture, population_indices, population_labels = get_admixture_proportions(params)
-    if params.has_key('title'):
+    if 'title' in params:
         title = params['title']
     else:
         title = params['inputfile']

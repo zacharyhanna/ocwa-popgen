@@ -38,7 +38,7 @@ tar xvfz CLUMPP_Linux64.1.1.2.tar.gz
 wget http://www.crypticlineage.net/download/distruct/distruct22.tar.gz  
 tar xvfz distruct22.tar.gz  
 ```
-We made a few slight modifications to the distruct2.2.py script for our plots. We have provided our modified version of the script in this repository as "distruct2.2_Hanna_et_al.py".  
+We made a few slight modifications to the distruct2.2.py script for our plots. We have provided our modified version of the script in this repository as "distruct2.2_ocwa.py".  
 
 ### 8pop analyses  
 We first ran analyzed our dataset with eight designated populations.  
@@ -60,7 +60,7 @@ CLUMPP paramfile_K2individ
 
 #### 8pop create Distruct plot  
 ```
-$ python distruct2.2_Hanna_et_al.py --input=StrAuto8pop -K 2 --output=StrAuto8pop_distruct2.2.png --popfile=OCWA_8pop_justPopFlags_names --poporder=OCWA_8pop_order_names  
+$ python distruct2.2_ocwa.py --input=StrAuto8pop -K 2 --output=StrAuto8pop_distruct2.2.png --popfile=OCWA_8pop_justPopFlags_names --poporder=OCWA_8pop_order_names  
 ```
 
 ### 7pop analyses  
@@ -83,7 +83,7 @@ CLUMPP paramfile_K2individ
 
 #### 7pop create Distruct plot  
 ```
-$ python distruct2.2_Hanna_et_al.py --input=StrAuto7pop -K 2 --output=StrAuto7pop_distruct2.2.png --popfile=OCWA_7pop_justPopFlags_names --poporder=OCWA_7pop_order_names  
+$ python distruct2.2_ocwa.py --input=StrAuto7pop -K 2 --output=StrAuto7pop_distruct2.2.png --popfile=OCWA_7pop_justPopFlags_names --poporder=OCWA_7pop_order_names  
 ```
 
 ### 2pop analyses  
@@ -106,7 +106,7 @@ CLUMPP paramfile_K4individ
 
 #### 2pop create Distruct plot  
 ```
-$ python distruct2.2_Hanna_et_al.py --input=StrAuto2pop -K 2 --output=StrAuto2pop_distruct2.2.png --popfile=OCWA_2pop_justPopFlags_names --poporder=OCWA_2pop_order_names  
+$ python distruct2.2_ocwa.py --input=StrAuto2pop -K 2 --output=StrAuto2pop_distruct2.2.png --popfile=OCWA_2pop_justPopFlags_names --poporder=OCWA_2pop_order_names  
 ```
 
 ## IMa2 analyses
