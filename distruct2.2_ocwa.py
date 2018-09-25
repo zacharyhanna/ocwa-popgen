@@ -210,4 +210,4 @@ if __name__=="__main__":
 
     # plot the data
     figure = plot_admixture(admixture, population_indices, population_labels, title)
-    figure.savefig(params['outputfile'], dpi=600, bbox_inches='tight', pad_inches=0)
+    figure.savefig(params['outputfile'], dpi=900, bbox_inches='tight', pad_inches=0)
