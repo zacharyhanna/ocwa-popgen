@@ -117,7 +117,12 @@ mpirun -np 10 IMa2p -hn 15 -q1183.5505060899999 -m6.7593228669463 -t23.671010121
 b1000000 -r2 -r5 -l20000 -p6 -u1 -hfg -ha0.999 -hb0.3 -i IMa2_input -o run_out  
 ```
 
-## Citing
+## Citing the repository
+
+Please cite this repository as follows (you should also add which version you used):  
+
+<a href="https://orcid.org/0000-0002-0210-7261" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">Hanna ZR</a>, Henderson JB, Wall JD. 2017. SPOW-BDOW-introgression-scripts. *Zenodo*. [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1065056.svg)](https://doi.org/10.5281/zenodo.1065056)
+
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1648691.svg)](https://doi.org/10.5281/zenodo.1648691)
 
