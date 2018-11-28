@@ -121,10 +121,7 @@ b1000000 -r2 -r5 -l20000 -p6 -u1 -hfg -ha0.999 -hb0.3 -i IMa2_input -o run_out
 
 Please cite this repository as follows (you should also add which version you used):  
 
-<a href="https://orcid.org/0000-0002-0210-7261" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">Hanna ZR</a>, Henderson JB, Wall JD. 2017. SPOW-BDOW-introgression-scripts. *Zenodo*. [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1065056.svg)](https://doi.org/10.5281/zenodo.1065056)
-
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1648691.svg)](https://doi.org/10.5281/zenodo.1648691)
+<a href="https://orcid.org/0000-0002-0210-7261" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">Hanna ZR</a>, Cicero C, Bowie RCK. 2018. ocwa-popgen. *Zenodo*. [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1648690.svg)](https://doi.org/10.5281/zenodo.1648690)
 
 ## References  
 Chhatre VE. 2016. Distruct. Version 2.2. [Accessed 2018 Jun 21]. Available from: http://www.crypticlineage.net/pages/distruct.html  
