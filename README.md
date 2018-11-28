@@ -117,6 +117,10 @@ mpirun -np 10 IMa2p -hn 15 -q1183.5505060899999 -m6.7593228669463 -t23.671010121
 b1000000 -r2 -r5 -l20000 -p6 -u1 -hfg -ha0.999 -hb0.3 -i IMa2_input -o run_out  
 ```
 
+## Citing
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1648691.svg)](https://doi.org/10.5281/zenodo.1648691)
+
 ## References  
 Chhatre VE. 2016. Distruct. Version 2.2. [Accessed 2018 Jun 21]. Available from: http://www.crypticlineage.net/pages/distruct.html  
 
